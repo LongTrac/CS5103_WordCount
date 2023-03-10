@@ -1,0 +1,15 @@
+Hello World, This README will descript how to use the Word Count Program.
+
+After you download the project:
+    1.Load the project into your IDE (IntelliJ is prefered).
+
+    2.Set up the argument field within the run configuration (Top Left corner, left of the run button):
+        This field will be the .txt or .doc file that you want to count the total words and word frequency.
+
+    3.I am using JAVA 19, JDK version: 19.0.2
+
+    4.After setting up, you can run the program, result will be printed in the console window at the bottom of the screen.
+
+    5.To run test case:
+        Navigate to the test classes, on the left of each function or the class itself, there will be run button that associate with the test case. Hit run to see results.
+        There are screenshots of the test case result in the requirement document.
