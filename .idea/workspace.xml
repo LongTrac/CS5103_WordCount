@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89fdd1a2-50de-4072-bd0f-dffcadfcb6d1" name="Changes" comment="0.0: Initial Commit: &#10;Created Basic Class model for Word Count Project&#10;Read File from a specific path&#10;Created Basic unit testing for 1 of method to make sure the info read in was correct">
-      <change afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
+    <list default="true" id="89fdd1a2-50de-4072-bd0f-dffcadfcb6d1" name="Changes" comment="1.0: First Phase:&#10;Add test case for files with multiple empty lines&#10;Add some check in processDocument method">
+      <change afterPath="$PROJECT_DIR$/BiggerFile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiggerFileWithEmptyLine.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordCountTest.doc" beforeDir="false" afterPath="$PROJECT_DIR$/WordCountTest.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordCount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WordCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordCountTest.java" afterDir="false" />
     </list>
@@ -58,41 +61,30 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest">
-    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="WordCount" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PROGRAM_PARAMETERS" value="./WordCountTest.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.testMain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordCountTest.TestEmptyLineEffectOnWordCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WordCount" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="testMain" />
+      <option name="MAIN_CLASS_NAME" value="WordCountTest" />
+      <option name="METHOD_NAME" value="TestEmptyLineEffectOnWordCount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.testMainWithCorrectNumberOfArg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordCountTest.getFrequency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WordCount" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="testMainWithCorrectNumberOfArg" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTest.testMainWithIncorrectNumberOfArg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="WordCount" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="testMainWithIncorrectNumberOfArg" />
+      <option name="MAIN_CLASS_NAME" value="WordCountTest" />
+      <option name="METHOD_NAME" value="getFrequency" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,20 +100,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WordCountTest.testPrintOutput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WordCount" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WordCountTest" />
+      <option name="METHOD_NAME" value="testPrintOutput" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.MainTest" />
-      <item itemvalue="JUnit.MainTest.testMain" />
-      <item itemvalue="JUnit.MainTest.testMainWithCorrectNumberOfArg" />
-      <item itemvalue="JUnit.MainTest.testMainWithIncorrectNumberOfArg" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.WordCountTest.TestEmptyLineEffectOnWordCount" />
       <item itemvalue="JUnit.WordCountTest.getWordCountForCaseSensitive" />
+      <item itemvalue="JUnit.WordCountTest.testPrintOutput" />
+      <item itemvalue="JUnit.WordCountTest.getFrequency" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTest" />
-        <item itemvalue="JUnit.MainTest.testMainWithIncorrectNumberOfArg" />
-        <item itemvalue="JUnit.MainTest.testMainWithCorrectNumberOfArg" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.WordCountTest.TestEmptyLineEffectOnWordCount" />
+        <item itemvalue="JUnit.WordCountTest.testPrintOutput" />
+        <item itemvalue="JUnit.WordCountTest.getFrequency" />
         <item itemvalue="JUnit.WordCountTest.getWordCountForCaseSensitive" />
-        <item itemvalue="JUnit.MainTest.testMain" />
       </list>
     </recent_temporary>
   </component>
@@ -141,12 +143,32 @@
       <option name="project" value="LOCAL" />
       <updated>1678337668214</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="0.1: Finish project's functionality.&#10;Add test case for: &#10;+ Main (testing correct argument)&#10;+ WordCount (compareSource, getWordCount and getWordCountforCaseSensitive)">
+      <created>1678476092043</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678476092043</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0.0: Initial Commit: &#10;Created Basic Class model for Word Count Project&#10;Read File from a specific path&#10;Created Basic unit testing for 1 of method to make sure the info read in was correct" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0: Initial Commit: &#10;Created Basic Class model for Word Count Project&#10;Read File from a specific path&#10;Created Basic unit testing for 1 of method to make sure the info read in was correct" />
+    <MESSAGE value="0.1: Finish project's functionality.&#10;Add test case for: &#10;+ Main (testing correct argument)&#10;+ WordCount (compareSource, getWordCount and getWordCountforCaseSensitive)" />
+    <MESSAGE value="1.0: First Phase:&#10;Add test case for files with multiple empty lines&#10;Add some check in processDocument method" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0: First Phase:&#10;Add test case for files with multiple empty lines&#10;Add some check in processDocument method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

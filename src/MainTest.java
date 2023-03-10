@@ -9,7 +9,7 @@ class MainTest {
 
     @Test
     void testMainWithIncorrectNumberOfArgLarger() {
-        // Arrange
+        // Set Up
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
@@ -26,7 +26,7 @@ class MainTest {
 
     @Test
     void testMainWithIncorrectNumberOfArgSmaller() {
-        // Arrange
+        // Set Up
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
@@ -43,7 +43,7 @@ class MainTest {
 
     @Test
     void testMainWithCorrectNumberOfArg() {
-        // Arrange
+        // Set up
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
@@ -51,15 +51,16 @@ class MainTest {
         Main.main(new String[]{"./Appleapple.txt"});
 
         // Assert
-        String expectedOutput =
-                "Original files:\n" +
-                "Apple\n" +
-                "apple\n" +
-                "\n" +
-                "Word Count: 2\n" +
-                "Frequency:\n" +
-                "\tapple     : 1\n" +
-                "\tApple     : 1";
+        String expectedOutput = """
+                Original files:
+                Apple
+                apple
+               
+                Word Count: 2
+                Frequency:
+                \tapple     : 1
+                \tApple     : 1""";
+
         assertEquals(expectedOutput, outContent.toString().trim());
 
         // Reset standard output

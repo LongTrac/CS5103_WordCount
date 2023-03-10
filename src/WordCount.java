@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -9,8 +8,6 @@ public class WordCount {
     private ArrayList<String> SourceLines;          //array list of source text lines
     private int WordCount;
     private HashMap<String, Integer> frequency;
-
-    private static String Blank = " \t\n";          //All acceptable blank characters
 
     public WordCount(String SourceFileName){
         this.SrcFileName = SourceFileName;
@@ -33,6 +30,9 @@ public class WordCount {
 
     public void processDocument (){
         for (String line: this.SourceLines) {
+            //Skip processing empty line
+            if (line.isEmpty() || line.isBlank())
+                continue;
             //count total words
             String[] tokens = line.split("[ \t\n]+");
             this.WordCount += tokens.length;
@@ -76,4 +76,5 @@ public class WordCount {
     public int getWordCount () {
         return WordCount;
     }
+    public HashMap<String,Integer> getFrequency () {return frequency;}
 }
