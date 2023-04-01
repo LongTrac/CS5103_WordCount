@@ -104,7 +104,9 @@ class WordCountTest {
                 	vit.      : 1
                 	cho.      : 1
                 	bo        : 1
-                	?         : 2""";
+                	?         : 2
+                Number of lines: 3
+                Number of characters: 59""";
         // Act
         Main.main(new String[]{"./WordCountTest.txt"});
         // Assert
@@ -127,5 +129,57 @@ class WordCountTest {
 
         //Assert
         assertEquals(wc2.getWordCount(),wc.getWordCount());
+    }
+
+    @Test
+    void TestLineCountWithOutEmptyLine(){
+        String FileName = "./BiggerFile.txt";
+        WordCount wc = new WordCount(FileName);
+
+        //Act
+        wc.processDocument();
+
+        //Assert
+        assertEquals(5,wc.lineCount());
+    }
+
+    @Test
+    void TestLineCountWithEmptyLine(){
+        String FileName = "./BiggerFileWithEmptyLine.txt";
+        WordCount wc = new WordCount(FileName);
+
+        //Act
+        wc.processDocument();
+
+        //Assert
+        assertEquals(9,wc.lineCount());
+    }
+
+    @Test
+    void TestCharCount(){
+        String FileName = "./WordCountTest.txt";
+        WordCount wc = new WordCount(FileName);
+
+        //Act
+        wc.processDocument();
+
+        //Assert
+        assertEquals(59,wc.getCharCount());
+    }
+
+    @Test
+    void TestEmptyLineEffectOnCharCount(){
+        //Set up
+        String FileName = "./BiggerFileWithEmptyLine.txt";
+        String FileName2 = "./BiggerFile.txt";
+        WordCount wc = new WordCount(FileName);
+        WordCount wc2 = new WordCount(FileName2);
+
+        //Act
+        wc.processDocument();
+        wc2.processDocument();
+
+        //Assert
+        assertEquals(wc2.getCharCount(),wc.getCharCount());
     }
 }

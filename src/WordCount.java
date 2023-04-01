@@ -7,12 +7,14 @@ public class WordCount {
     private String SrcFileName;                     //File name
     private ArrayList<String> SourceLines;          //array list of source text lines
     private int WordCount;
+    private int CharCount;
     private HashMap<String, Integer> frequency;
 
     public WordCount(String SourceFileName){
         this.SrcFileName = SourceFileName;
         SourceLines = new ArrayList<String>();
         WordCount = 0;
+        CharCount = 0;
         frequency = new HashMap<String, Integer>();
 
         try {
@@ -36,6 +38,11 @@ public class WordCount {
             //count total words
             String[] tokens = line.split("[ \t\n]+");
             this.WordCount += tokens.length;
+
+            //count character
+            for (String token: tokens){
+                this.CharCount += token.length();
+            }
 
             Integer count = 0;
             //count frequency
@@ -64,9 +71,17 @@ public class WordCount {
         for(String key: frequency.keySet()){
             result.append(String.format("\n\t%-10s: %s",key,frequency.get(key)));
         }
+        result.append("\nNumber of lines: " + lineCount());
+        result.append("\nNumber of characters: " + getCharCount());
+
 
         System.out.println(result);
     }
+
+    public int lineCount (){
+        return SourceLines.size();
+    }
+
 
 
     /********************************************Getter and Setter*************************************/
@@ -76,5 +91,8 @@ public class WordCount {
     public int getWordCount () {
         return WordCount;
     }
-    public HashMap<String,Integer> getFrequency () {return frequency;}
+    public int getCharCount() {
+        return CharCount;
+    }
+    public HashMap<String,Integer> getFrequency () { return frequency; }
 }

@@ -59,7 +59,9 @@ class MainTest {
                 Word Count: 2
                 Frequency:
                 \tapple     : 1
-                \tApple     : 1""";
+                \tApple     : 1
+                Number of lines: 2
+                Number of characters: 10""";
 
         assertEquals(expectedOutput, outContent.toString().trim());
 
