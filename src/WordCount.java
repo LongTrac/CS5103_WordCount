@@ -96,10 +96,7 @@ public class WordCount {
     }
 
     public boolean checkReplaceWordExist (String replaceWord){
-        if(frequency.containsKey(replaceWord))
-            return true;
-        else
-            return false;
+        return(frequency.containsKey(replaceWord));
     }
 
     public void writeOutput (ArrayList<String> list){

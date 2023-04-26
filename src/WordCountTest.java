@@ -194,4 +194,49 @@ class WordCountTest {
         assertTrue(wc.checkReplaceWordExist("Con"));
 
     }
+
+    @Test
+    void TestReplacementAndFileCreation (){
+        // Set up
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        String expectedOutput = """
+                Original files:
+                Apple
+                apple
+                                
+                Word Count: 2
+                Frequency:
+                	apple     : 1
+                	Apple     : 1
+                Number of lines: 2
+                Number of characters: 10
+                The replacement is complete please check the file: ./AppleappleAfterReplacement.txt
+                Original files:
+                Apple
+                bee
+                                
+                Word Count: 2
+                Frequency:
+                	Apple     : 1
+                	bee       : 1
+                Number of lines: 2
+                Number of characters: 8""";
+        try{
+
+        // Replacement apple to bee
+        Main.main(new String[]{"./Appleapple.txt","apple","bee"});
+
+        // Try to read and display
+        Main.main(new String[]{"./AppleappleAfterReplacement.txt"});
+
+            assertEquals(expectedOutput, outContent.toString().trim().replace("\r",""));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            // Reset standard output
+            System.setOut(System.out);
+        }
+    }
 }

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89fdd1a2-50de-4072-bd0f-dffcadfcb6d1" name="Changes" comment="1.2: Update code to match Phase 2 requirements">
+    <list default="true" id="89fdd1a2-50de-4072-bd0f-dffcadfcb6d1" name="Changes" comment="2.0: 2nd Requirement Change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordCount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WordCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordCountTest.java" afterDir="false" />
     </list>
@@ -58,31 +57,22 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WordCountTest">
-    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.WordCountTest.TestReplacementAndFileCreation">
+    <configuration name="MainTest.testMainWithThreeArgCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WordCount" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTest.testMainWithIncorrectNumberOfArgLarger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="WordCount" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="testMainWithIncorrectNumberOfArgLarger" />
+      <option name="METHOD_NAME" value="testMainWithThreeArgCorrectly" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.testMainWithIncorrectNumberOfArgSmaller" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.testMainWithThreeArgIncorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WordCount" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="testMainWithIncorrectNumberOfArgSmaller" />
+      <option name="METHOD_NAME" value="testMainWithThreeArgIncorrectly" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -93,6 +83,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WordCountTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordCountTest.TestReplacementAndFileCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WordCount" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WordCountTest" />
+      <option name="METHOD_NAME" value="TestReplacementAndFileCreation" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,19 +108,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.MainTest.testMainWithIncorrectNumberOfArgLarger" />
-      <item itemvalue="JUnit.MainTest.testMainWithIncorrectNumberOfArgSmaller" />
+      <item itemvalue="JUnit.MainTest.testMainWithThreeArgCorrectly" />
+      <item itemvalue="JUnit.MainTest.testMainWithThreeArgIncorrectly" />
+      <item itemvalue="JUnit.WordCountTest.TestReplacementAndFileCreation" />
       <item itemvalue="JUnit.WordCountTest.checkReplaceWordExist" />
-      <item itemvalue="JUnit.MainTest" />
       <item itemvalue="JUnit.WordCountTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WordCountTest" />
+        <item itemvalue="JUnit.WordCountTest.TestReplacementAndFileCreation" />
         <item itemvalue="JUnit.WordCountTest.checkReplaceWordExist" />
-        <item itemvalue="JUnit.MainTest" />
-        <item itemvalue="JUnit.MainTest.testMainWithIncorrectNumberOfArgSmaller" />
-        <item itemvalue="JUnit.MainTest.testMainWithIncorrectNumberOfArgLarger" />
+        <item itemvalue="JUnit.WordCountTest" />
+        <item itemvalue="JUnit.MainTest.testMainWithThreeArgIncorrectly" />
+        <item itemvalue="JUnit.MainTest.testMainWithThreeArgCorrectly" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680379403932</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2.0: 2nd Requirement Change">
+      <created>1682486640648</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682486640648</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,7 +195,8 @@
     <MESSAGE value="1.0: First Phase:&#10;Add test case for files with multiple empty lines&#10;Add some check in processDocument method" />
     <MESSAGE value="1.1: Update README." />
     <MESSAGE value="1.2: Update code to match Phase 2 requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.2: Update code to match Phase 2 requirements" />
+    <MESSAGE value="2.0: 2nd Requirement Change" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0: 2nd Requirement Change" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WordCount$MainTest.ic" NAME="MainTest Coverage Results" MODIFIED="1682306917787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

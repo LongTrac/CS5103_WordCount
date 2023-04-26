@@ -5,6 +5,7 @@ After you download the project:
 
     2.Set up the argument field within the run configuration (Top Left corner, left of the run button):
         This field will be the .txt or .doc file that you want to count the total words and word frequency.
+        The project is set up to take in either 1 argument (fileName) or 3 arguments (fileName word_you_want_to_replace word_to_replace_with)
 
     3.I am using JAVA 19, JDK version: 19.0.2
 
