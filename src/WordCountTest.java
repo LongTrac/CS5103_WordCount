@@ -182,4 +182,16 @@ class WordCountTest {
         //Assert
         assertEquals(wc2.getCharCount(),wc.getCharCount());
     }
+
+    @Test
+    void checkReplaceWordExist(){
+        //Set up
+        String FileName = "./WordCountTest.txt";
+        WordCount wc = new WordCount(FileName);
+        wc.processDocument();
+
+        assertFalse(wc.checkReplaceWordExist("ew"));
+        assertTrue(wc.checkReplaceWordExist("Con"));
+
+    }
 }

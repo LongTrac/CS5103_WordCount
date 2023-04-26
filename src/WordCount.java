@@ -1,5 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -26,7 +25,7 @@ public class WordCount {
                 SourceLines.add(sTemp);
             }
         } catch (FileNotFoundException e) {
-            System.out.println("File can not be opened");
+            System.out.println("File can not be opened. Please check filepath");
         }
     }
 
@@ -82,7 +81,41 @@ public class WordCount {
         return SourceLines.size();
     }
 
+    public void optionalWordReplacement(String replaceWord, String replaceWith){
+        //if word not found in doc
+        if(!checkReplaceWordExist(replaceWord)){
+            System.out.println("The word you want to replace can not be found in the document");
+            return;
+        }
+        //word found ==> replacing
+        ArrayList<String> afterReplace = new ArrayList<>();
+        for (String line: SourceLines) {
+            afterReplace.add(line.replace(replaceWord, replaceWith));
+        }
+        writeOutput(afterReplace);
+    }
 
+    public boolean checkReplaceWordExist (String replaceWord){
+        if(frequency.containsKey(replaceWord))
+            return true;
+        else
+            return false;
+    }
+
+    public void writeOutput (ArrayList<String> list){
+        String name = SrcFileName.substring(0,SrcFileName.length()-4)+"AfterReplacement.txt";
+        File file = new File(name);
+        try {
+            PrintWriter writer = new PrintWriter(new FileWriter(file));
+            for (String item : list) {
+                writer.println(item);
+            }
+            writer.close();
+            System.out.println("The replacement is complete please check the file: "+ name);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     /********************************************Getter and Setter*************************************/
     public ArrayList<String> getSourceLines() {
